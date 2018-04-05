@@ -22,7 +22,7 @@
 					<user>${user}</user>
 					<password>${password}</password>
 					<baselineOnMigrate>true</baselineOnMigrate>
-					<schemas>${user}</schemas>
+					<schemas>dbo</schemas>
 					<target>${target}</target>
 				</configuration>
 				<dependencies>
