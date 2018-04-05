@@ -6,9 +6,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<user>x</user>
-		<password>x</password>
-		<target>1</target>
+		<user>sysdba</user>
+		<password>
+			<![CDATA[?B{<^U?dGmS#k%8/]]>
+		</password>
+		<target>2.1</target>
 	</properties>
 
 	<build>
@@ -18,7 +20,7 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.0.7</version>
 				<configuration>
-					<url>jdbc:sqlserver://172.17.0.1:1433;DatabaseName=rec</url>
+					<url>jdbc:sqlserver://laurowagnitz.database.windows.net;DatabaseName=receituario</url>
 					<user>${user}</user>
 					<password>${password}</password>
 					<baselineOnMigrate>true</baselineOnMigrate>
