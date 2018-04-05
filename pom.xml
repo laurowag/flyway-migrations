@@ -7,9 +7,7 @@
 
 	<properties>
 		<user>sysdba</user>
-		<password>
-			<![CDATA[?B{<^U?dGmS#k%8/]]>
-		</password>
+		<password>masterkey</password>
 		<target>2.1</target>
 	</properties>
 
