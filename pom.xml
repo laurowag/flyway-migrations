@@ -21,8 +21,7 @@
 					<url>jdbc:sqlserver://laurowagnitz.database.windows.net:1433;database=receituario;user=sysdba@laurowagnitz;password=lw2010@!;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</url>
 					<user>${user}</user>
 					<password>${password}</password>
-					<baselineOnMigrate>true</baselineOnMigrate>
-					<schemas>dbo</schemas>
+					<baselineOnMigrate>true</baselineOnMigrate>					
 					<target>${target}</target>
 				</configuration>
 				<dependencies>
