@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.lauro.wagnitz</groupId>
+	<artifactId>TesteMigrations</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<user>x</user>
+		<password>x</password>
+		<target>1</target>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>5.0.7</version>
+				<configuration>
+					<url>jdbc:sqlserver://172.17.0.1:1433;DatabaseName=rec</url>
+					<user>${user}</user>
+					<password>${password}</password>
+					<baselineOnMigrate>true</baselineOnMigrate>
+					<schemas>${user}</schemas>
+					<target>${target}</target>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>com.microsoft.sqlserver</groupId>
+						<artifactId>mssql-jdbc</artifactId>
+						<version>6.2.2.jre8</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
