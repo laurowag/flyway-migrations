@@ -6,9 +6,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<user>sysdba</user>
-		<password>lw2010@!</password>
-		<target>2.1</target>
+		<flyway.url></flyway.url>
+		<flyway.user></flyway.user>
+		<flyway.password></flyway.password>
+		<flyway.schema></flyway.schema>
+		<flyway.target></flyway.target>
 	</properties>
 
 	<build>
@@ -18,11 +20,7 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.0.7</version>
 				<configuration>
-					<url>jdbc:sqlserver://laurowagnitz.database.windows.net:1433;database=receituario;user=sysdba@laurowagnitz;password=lw2010@!;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</url>
-					<user>${user}</user>
-					<password>${password}</password>
 					<baselineOnMigrate>true</baselineOnMigrate>					
-					<target>${target}</target>
 				</configuration>
 				<dependencies>
 					<dependency>
