@@ -9,7 +9,7 @@
 		<flyway.url></flyway.url>
 		<flyway.user></flyway.user>
 		<flyway.password></flyway.password>
-		<flyway.schema></flyway.schema>
+		<flyway.schemas></flyway.schemas>
 		<flyway.target></flyway.target>
 	</properties>
 
