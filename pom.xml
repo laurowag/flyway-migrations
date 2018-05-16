@@ -6,10 +6,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<flyway.url></flyway.url>
-		<flyway.user></flyway.user>
-		<flyway.password></flyway.password>
-		<flyway.schemas></flyway.schemas>
+		<flyway.url>jdbc:sqlserver://localhost:1433;DatabaseName=arm</flyway.url>
+		<flyway.user>app_tenant</flyway.user>
+		<flyway.password>lw2010@!</flyway.password>        
+        <flyway.schemas>time3s</flyway.schemas>
 	</properties>
 	
 	<dependencies>
@@ -47,7 +47,10 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.0.7</version>
 				<configuration>
-					<baselineOnMigrate>true</baselineOnMigrate>					
+					<baselineOnMigrate>true</baselineOnMigrate>
+                    <placeholders>
+                        <tenant>${flyway.schemas}</tenant>                        
+                    </placeholders>					
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -75,4 +78,5 @@
 		</plugins>
 	</build>
 
+	<packaging>ear</packaging>
 </project>
