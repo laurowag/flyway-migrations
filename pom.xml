@@ -10,7 +10,6 @@
 		<flyway.user></flyway.user>
 		<flyway.password></flyway.password>
 		<flyway.schemas></flyway.schemas>
-		<flyway.target></flyway.target>
 	</properties>
 
 	<build>
